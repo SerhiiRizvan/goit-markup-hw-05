@@ -676,6 +676,7 @@ body {
 }
 
 .projects-item {
+  flex-basis: calc((100% - 60px) / 3);
   background: #ffffff;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -695,6 +696,24 @@ body {
 }
 
 .projects-link {
+}
+
+.projects-item-wrap {
+  position: relative;
+}
+
+.projects-images-text {
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  padding: 63px 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transform: translateY();
+  background: rgba(33, 150, 243, 0.9);
+  color: #ffffff;
 }
 
 .projects-images {
