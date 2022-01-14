@@ -615,6 +615,27 @@ body {
   fill: currentColor;
 }
 
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  width: 500px;
+  min-height: 500px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* -------------------------------ПОРТФОЛИО---------------------------- */
 /* ------------------------ ---Главный-контент------------------------- */
 /* -------------------------------Портфолио---------------------------- */
@@ -695,11 +716,16 @@ body {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.projects-item:hover .projects-images-text {
+  transform: translateY(0);
+}
+
 .projects-link {
 }
 
 .projects-item-wrap {
   position: relative;
+  overflow: hidden;
 }
 
 .projects-images-text {
@@ -711,9 +737,10 @@ body {
   top: 0;
   left: 0;
   height: 100%;
-  transform: translateY();
+  transform: translateY(100%);
   background: rgba(33, 150, 243, 0.9);
   color: #ffffff;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-images {
